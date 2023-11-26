@@ -7,12 +7,15 @@ use std::str::Utf8Error;
 use crate::http::method;
 use super::{QueryString, QueryStringValue};
 
-pub struct Request <'buf>{
+pub struct Request <'buf> {
     path: &'buf str,
     query_string: Option<QueryString<'buf>>,
     method: Method,
 }
 
+impl<'buf> Request<'buf> {
+    pub fn path(&self)
+}
 
 impl<'buf> TryFrom<&'buf [u8]> for Request<'buf> {
     type Error = ParseError;
