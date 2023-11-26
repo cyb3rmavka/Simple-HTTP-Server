@@ -28,8 +28,6 @@ impl FromStr for Method {
             "PATH" => Ok(Self::PATH),
             _ => Err(MethodError),
         }
-
-        unimplemented!()
     }
 }
 
